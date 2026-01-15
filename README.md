@@ -49,17 +49,18 @@ After cleaning the data, I found clear patterns in the market.
 **Price vs. Hardware Tiers**
 The extracted CPU and GPU tiers show a strong correlation with price. The cleaning process successfully separated entry-level machines from high-performance workstations.
 
-[Insert your scatterplot or boxplot image here]
+<img width="1726" height="1074" alt="image" src="https://github.com/user-attachments/assets/a59e49a8-ed8a-4dc5-9e57-adbf08ab0708" />
+
+> *Figure 1: Validation of CPU Feature Engineering. The boxplot confirms the price hierarchy across the five extracted CPU tiers. The progressive increase in median price demonstrates that the Regex parsing correctly categorized the processors based on performance levels, from Low-End to High-End.*
+
+<br> <img width="1726" height="1074" alt="image" src="https://github.com/user-attachments/assets/a701b6b8-efe5-4f47-b33b-862770711616" />
+
+> *Figure 2: Validation of Feature Engineering. The boxplot demonstrates a clear price progression across the extracted GPU tiers. The distinct separation between "Integrated" and "High-End" medians confirms that the regex logic successfully isolated different market segments.*
+
+
 
 **Anomalies Detected**
 I used clustering on the hardware specs to find pricing anomalies. Some laptops with "Premium" hardware specs are currently priced in the "Intermediate" range. This indicates potential arbitrage opportunities.
-
-## How to Run
-
-1.  Clone this repository.
-2.  Open the project in RStudio.
-3.  Run the script `01_data_cleaning.R` to process the raw data.
-4.  Run `02_eda.R` to generate the visualizations.
 
 ## Next Steps
 
